@@ -1,0 +1,164 @@
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  margin-bottom: 10px;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+#sidebar.nav {
+  width: 190px;
+}
+
+#developer {
+  color: red;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.border-blue {
+  border: 2px solid blue;
+  margin-left: 30px;
+  padding: 20px;
+}
+
+.border-green {
+  border: 2px solid green;
+  margin-left: 30px;
+  padding: 20px;
+}
+
+
+[state^="home"] [ui-view="mainView"].ng-enter, [state^="home"] [ui-view="mainView"].ng-leave,
+[state^="about"] [ui-view="mainView"].ng-enter, [state^="about"] [ui-view="mainView"].ng-leave,
+[state^="contact"] [ui-view="mainView"].ng-enter, [state^="contact"] [ui-view="mainView"].ng-leave
+{
+  position: absolute;
+  left: 0;
+  right: 0;
+  -webkit-transition:all .5s ease-in-out;
+	-moz-transition:all .5s ease-in-out;
+	-o-transition:all .5s ease-in-out;
+	transition:all .5s ease-in-out;
+}
+
+[state^="home"] [ui-view="mainView"].ng-enter,
+[state^="about"] [ui-view="mainView"].ng-enter,
+[state^="contact"] [ui-view="mainView"].ng-enter
+{
+  opacity: 0;
+  -webkit-transform:scale3d(0.5, 0.5, 0.5);
+  -moz-transform:scale3d(0.5, 0.5, 0.5);
+  transform:scale3d(0.5, 0.5, 0.5);
+}
+
+[state^="home"] [ui-view="mainView"].ng-enter-active,
+[state^="about"] [ui-view="mainView"].ng-enter-active,
+[state^="contact"] [ui-view="mainView"].ng-enter-active
+{
+  opacity: 1;
+  -webkit-transform:scale3d(1, 1, 1);
+  -moz-transform:scale3d(1, 1, 1);
+  transform:scale3d(1, 1, 1);
+}
+
+[state^="home"] [ui-view="mainView"].ng-leave,
+[state^="about"] [ui-view="mainView"].ng-leave,
+[state^="contact"] [ui-view="mainView"].ng-leave
+{
+  opacity: 1;
+  /*padding-left: 0px;*/  
+  -webkit-transform:translate3d(0, 0, 0);
+  -moz-transform:translate3d(0, 0, 0);
+  transform:translate3d(0, 0, 0);
+}
+
+[state^="home"] [ui-view="mainView"].ng-leave-active,
+[state^="about"] [ui-view="mainView"].ng-leave-active,
+[state^="contact"] [ui-view="mainView"].ng-leave-active
+{
+  opacity: 0;
+  /*padding-left: 100px;*/
+  -webkit-transform:translate3d(100px, 0, 0);
+  -moz-transform:translate3d(100px, 0, 0);
+  transform:translate3d(100px, 0, 0);
+}
+
+.jumbotron p.lead {
+  text-align: left;
+}

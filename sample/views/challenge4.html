@@ -1,0 +1,18 @@
+<h2>{{title}}</h2>
+<h4>{{description}}</h4>
+
+<p>NOTE: I was not able to complete this challenge at 100%, but implemented a basic sort and filter option.</p>
+
+<pre>{{states}}</pre>
+
+<button class="btn btn-default" ng-click="orderBy()">Order by Name</button>
+
+<pre>
+    Result:<br>
+    {{statesOrdered}}</pre>
+
+<input type="text" ng-model="filterString">
+<button class="btn btn-default" ng-click="search(filterString)">Search</button>
+<pre>
+    Result:<br>
+    {{statesFiltered}}</pre>

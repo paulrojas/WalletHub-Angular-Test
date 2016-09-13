@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+
+    <head>
+        <title>WalletHub - Frontend Angular Test</title>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="../vendors/css/bootstrap.css" />
+        <link rel="stylesheet" href="./styles/main.css">
+        <script data-main="main.js" src="../vendors/scripts/require2.1.15.js"></script>
+    </head>
+
+    <body state="{{$state.current.name}}">
+        <div class="header">
+            <div class="navbar navbar-default" role="navigation">
+                <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#/">WalletHub - Frontend Angular Test</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="js-navbar-collapse">
+
+                    <ul class="nav navbar-nav pull-right"">
+                    <li ui-sref-active="active"><a ui-sref="home">Home</a></li>
+                    <li ui-sref-active="active"><a ui-sref="about">About</a></li>
+                    <li ui-sref-active="active"><a ui-sref="contact">Contact</a></li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2" ui-view="leftMenu"></div>
+                <div class="col-sm-10">
+                    <div ui-view="mainView"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer navbar navbar-default navbar-fixed-bottom">
+        <div class="container">
+            <p><span class="glyphicon glyphicon-glyphicon-check"></span> Developed By <span id="developer">Paul Rojas</span> - <a href="mailto:rojaspaul@hotmail.com">rojaspaul@hotmail.com</a></p>
+        </div>
+        </div>
+    </body>
+</html> 
